@@ -16,6 +16,7 @@ import com.bangkit.caraka.ui.ViewModelFactory
 import com.bangkit.caraka.ui.camera.CameraActivity
 import com.bangkit.caraka.ui.onBoarding.feature.onboarding.OnBoardingActivity
 import com.bangkit.caraka.ui.onBoarding.prefmanager.OnBoardingPrefManager
+import com.bangkit.caraka.ui.signin.SignInActivity
 import com.bangkit.caraka.utill.MainViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
@@ -81,7 +82,7 @@ class HomeActivity : AppCompatActivity() {
             if (!user.isLogin) {
 
                 //ubah ke signIn Lagi
-                val intent = Intent(this, OnBoardingActivity::class.java)
+                val intent = Intent(this, SignInActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
                 finish()
